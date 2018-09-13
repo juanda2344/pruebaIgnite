@@ -10,7 +10,7 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  users: any[] = [];
+  users;
 
   constructor(public navCtrl: NavController,public userService:UserServiceProvider) {
 
@@ -20,8 +20,10 @@ export class HomePage {
     this.userService.getUsers()
     .subscribe(
       (data) => { // Success
-        this.users = data['results'];
-        console.log(this.users);
+        
+        this.users=data;
+        console.log(data);
+        debugger;
       },
       (error) =>{
         console.error(error);

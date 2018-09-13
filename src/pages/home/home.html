@@ -10,88 +10,100 @@
 </ion-header>
 
 <ion-content padding>
-	<ion-grid>
-		<ion-row>
-			<ion-col col-1>
-				#
-			</ion-col>
-			<ion-col col-1>
-				Codigo de Pedido
-			</ion-col>
-			<ion-col col-1>
-				Fecha
-			</ion-col>
-			<ion-col col-1>
-				Hora de Prepatracion
-			</ion-col>
-			<ion-col col-1>
-				Hora de Recojida
-			</ion-col>
-			<ion-col col-1>
-				Cliente
-			</ion-col>
-			<ion-col col-1>
-				Modo de entrega
-			</ion-col>
-			<ion-col col-1>
-				Metodo de Pago
-			</ion-col>
-			<ion-col col-1>
-				Subtotal
-			</ion-col>
-			<ion-col col-1>
-				Impuestos
-			</ion-col>
-			<ion-col col-0.5>
-				Total
-			</ion-col>
-			<ion-col col-0.5>
-				Estado
-			</ion-col>
-			<ion-col col-0.5>
-				Acciones
-			</ion-col>
-		</ion-row>
-		<ion-row>
-			<ion-col col-1 *ngFor="let user of users">
-				<p>{{ user.id }}</p>
-			</ion-col>
-			<ion-col col-1>
-				Codigo de Pedido
-			</ion-col>
-			<ion-col col-1>
-				Fecha
-			</ion-col>
-			<ion-col col-1>
-				Hora de Prepatracion
-			</ion-col>
-			<ion-col col-1>
-				Hora de Recojida
-			</ion-col>
-			<ion-col col-1>
-				Cliente
-			</ion-col>
-			<ion-col col-1>
-				Modo de entrega
-			</ion-col>
-			<ion-col col-1>
-				Metodo de Pago
-			</ion-col>
-			<ion-col col-1>
-				Subtotal
-			</ion-col>
-			<ion-col col-1>
-				Impuestos
+		<ion-grid >
+				<ion-row>
+					<ion-col col-1>
+						#
+					</ion-col>
+					<ion-col col-1>
+						Codigo de Pedido
+					</ion-col>
+					<ion-col col-1>
+						Fecha
+					</ion-col>
+					<ion-col col-1>
+						Hora de Prepatracion
+					</ion-col>
+					<ion-col col-1>
+						Hora de Recojida
+					</ion-col>
+					<ion-col col-1>
+						Cliente
+					</ion-col>
+					<ion-col col-1>
+						Modo de entrega
+					</ion-col>
+					<ion-col col-1>
+						Metodo de Pago
+					</ion-col>
+					<ion-col col-1>
+						Subtotal
+					</ion-col>
+					<ion-col col-1>
+						Impuestos
+					</ion-col>
+					<ion-col col-0.5>
+						Total
+					</ion-col>
+					<ion-col col-0.5>
+						Estado
+					</ion-col>
+					<ion-col col-0.5>
+						Acciones
+					</ion-col>
+				</ion-row>
+				</ion-grid>
+
+	<ion-grid *ngFor="let user of users;let i=index">
+				<ion-row >
+			<ion-col >
+				<p>{{ i }}</p>
 			</ion-col>
 			<ion-col col-0.5>
-				Total
+					<p>{{ user.pick_up_code }}</p>
 			</ion-col>
 			<ion-col col-0.5>
-				Estado
+					<p>{{ user.created_at }}</p>
 			</ion-col>
 			<ion-col col-0.5>
-				Acciones
+					<p>{{ user.preparation_time }}</p>
 			</ion-col>
+			<ion-col col-0.5>
+					<p>{{ user.created_at }}</p>
+			</ion-col>
+			<ion-col col-0.5>
+					<p>{{ user.branch.client.name}}</p>
+			</ion-col>
+			<ion-col col-0.5>
+					<p>{{ user.table_status}}</p>
+				
+			</ion-col>
+			<ion-col col-0.5>
+					<p>{{ user.status_name}}</p>
+					
+			</ion-col>
+			<ion-col col-0.5>
+					<p>{{ user.subtotal}}</p>
+				
+			</ion-col>
+			<ion-col col-0.5>
+					<p>{{ user.iva}}</p>
+				iva
+			</ion-col>
+			<ion-col col-0.5>
+					<p>{{ user.total}}</p>
+				
+			</ion-col>
+			<ion-col col-0.5>
+					<p>{{ user.status_name_order}}</p>					
+			</ion-col>
+			<ion-col col-0.5>
+					<button ion-button  clear><ion-icon name="eye"></ion-icon><ion-icon name="information"></ion-icon><ion-icon name="trash"></ion-icon><ion-icon name="print"></ion-icon></button>
+								
+			</ion-col>		
+			
+
+			
 		</ion-row>
 	</ion-grid>
 </ion-content>
