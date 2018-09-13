@@ -1,14 +1,97 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+		<button ion-button color="danger" clear>Nuevos</button>
+		<button ion-button  clear>En Preparacion</button>
+		<button ion-button  clear>Terminados</button>
+		<button ion-button  clear>Anulados</button>
+		<button ion-button  clear>Todos</button>
+	</ion-navbar>
+	<p>Generar un reporte de los pedidos <button ion-button  clear ><ion-icon name="print"></ion-icon>Generar PDF</button></p>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-1>
+				#
+			</ion-col>
+			<ion-col col-1>
+				Codigo de Pedido
+			</ion-col>
+			<ion-col col-1>
+				Fecha
+			</ion-col>
+			<ion-col col-1>
+				Hora de Prepatracion
+			</ion-col>
+			<ion-col col-1>
+				Hora de Recojida
+			</ion-col>
+			<ion-col col-1>
+				Cliente
+			</ion-col>
+			<ion-col col-1>
+				Modo de entrega
+			</ion-col>
+			<ion-col col-1>
+				Metodo de Pago
+			</ion-col>
+			<ion-col col-1>
+				Subtotal
+			</ion-col>
+			<ion-col col-1>
+				Impuestos
+			</ion-col>
+			<ion-col col-0.5>
+				Total
+			</ion-col>
+			<ion-col col-0.5>
+				Estado
+			</ion-col>
+			<ion-col col-0.5>
+				Acciones
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-1 *ngFor="let user of users">
+				<p>{{ user.id }}</p>
+			</ion-col>
+			<ion-col col-1>
+				Codigo de Pedido
+			</ion-col>
+			<ion-col col-1>
+				Fecha
+			</ion-col>
+			<ion-col col-1>
+				Hora de Prepatracion
+			</ion-col>
+			<ion-col col-1>
+				Hora de Recojida
+			</ion-col>
+			<ion-col col-1>
+				Cliente
+			</ion-col>
+			<ion-col col-1>
+				Modo de entrega
+			</ion-col>
+			<ion-col col-1>
+				Metodo de Pago
+			</ion-col>
+			<ion-col col-1>
+				Subtotal
+			</ion-col>
+			<ion-col col-1>
+				Impuestos
+			</ion-col>
+			<ion-col col-0.5>
+				Total
+			</ion-col>
+			<ion-col col-0.5>
+				Estado
+			</ion-col>
+			<ion-col col-0.5>
+				Acciones
+			</ion-col>
+		</ion-row>
+	</ion-grid>
 </ion-content>
